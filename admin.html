@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Pesanan | Toko Modern Bima</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .admin-table { width: 100%; border-collapse: collapse; margin-top: 22px; }
+    .admin-table th, .admin-table td { padding: 13px 10px; border-bottom: 1px solid #e7edf2; text-align: left; vertical-align: top; }
+    .admin-table th { color: var(--muted); font-size: 13px; }
+    .admin-table select { padding: 8px; border: 1px solid #dfe7ee; border-radius: 8px; }
+    .order-items { color: var(--muted); font-size: 13px; line-height: 1.6; }
+    .admin-empty { padding: 30px 0; color: var(--muted); }
+    .admin-login { max-width: 420px; margin: 0 auto; }
+    .admin-login label { display: block; margin: 14px 0 6px; font-weight: 700; }
+    .admin-login input { width: 100%; padding: 13px; border: 1px solid #dfe7ee; border-radius: 10px; font: inherit; }
+    .admin-login .btn { width: 100%; margin-top: 16px; }
+    .admin-error { min-height: 22px; margin: 12px 0 0; color: #b42318; font-size: 13px; }
+    .admin-toolbar { display: flex; justify-content: flex-end; margin-bottom: 12px; }
+    .logout-button { padding: 9px 13px; border: 1px solid #dfe7ee; border-radius: 9px; background: #fff; color: var(--text); cursor: pointer; }
+    @media (max-width: 760px) { .admin-table { display: block; overflow-x: auto; white-space: nowrap; } }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="hero-inner">
+      <span class="badge">PANEL TOKO</span>
+      <h1>Pesanan Masuk</h1>
+      <p>Kelola pembayaran dan status order Toko Modern Bima.</p>
+    </div>
+  </header>
+  <nav>
+    <a href="index.html">Beranda</a>
+    <a href="produk.html">Produk</a>
+    <a href="admin.html">Admin</a>
+  </nav>
+  <main class="container">
+    <section class="admin-login" id="adminLogin">
+      <h1>Masuk sebagai admin</h1>
+      <p class="section-subtitle">Masukkan password untuk mengelola pesanan toko.</p>
+      <form id="adminLoginForm">
+        <label for="adminPassword">Password admin</label>
+        <input id="adminPassword" name="password" type="password" required autocomplete="current-password" placeholder="Masukkan password" />
+        <button class="btn" type="submit">Masuk</button>
+        <p class="admin-error" id="adminLoginError" role="alert"></p>
+      </form>
+    </section>
+    <section id="adminPanel" hidden>
+    <div class="admin-toolbar"><button class="logout-button" id="logoutButton" type="button">Keluar</button></div>
+    <div class="page-header">
+      <h1>Daftar Pesanan</h1>
+      <p class="section-subtitle">Halaman ini berjalan dari data lokal server.</p>
+    </div>
+    <div id="adminState" class="admin-empty">Memuat pesanan...</div>
+    <div style="overflow-x:auto">
+      <table class="admin-table" id="ordersTable" hidden>
+        <thead><tr><th>Order</th><th>Pelanggan</th><th>Item</th><th>Total</th><th>Pembayaran</th><th>Status</th></tr></thead>
+        <tbody id="ordersBody"></tbody>
+      </table>
+    </div>
+    </section>
+  </main>
+  <script>
+    const adminLogin = document.getElementById('adminLogin');
+    const adminPanel = document.getElementById('adminPanel');
+    const adminLoginForm = document.getElementById('adminLoginForm');
+    const adminPassword = document.getElementById('adminPassword');
+    const adminLoginError = document.getElementById('adminLoginError');
+    const logoutButton = document.getElementById('logoutButton');
+    const ordersBody = document.getElementById('ordersBody');
+    const ordersTable = document.getElementById('ordersTable');
+    const adminState = document.getElementById('adminState');
+    const rupiah = (value) => `Rp ${Number(value).toLocaleString('id-ID')}`;
+    const escapeHtml = (value) => String(value).replace(/[&<>'"]/g, (character) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', "'": '&#39;', '"': '&quot;' }[character]));
+
+    function showAdminPanel() {
+      adminLogin.hidden = true;
+      adminPanel.hidden = false;
+      loadOrders().catch(() => { adminState.textContent = 'Gagal memuat pesanan.'; });
+    }
+
+    async function checkAdminSession() {
+      const response = await fetch('/api/admin/me');
+      if (response.ok) showAdminPanel();
+    }
+
+    adminLoginForm.addEventListener('submit', async (event) => {
+      event.preventDefault();
+      adminLoginError.textContent = '';
+      const response = await fetch('/api/admin/login', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ password: adminPassword.value }) });
+      if (!response.ok) {
+        adminLoginError.textContent = 'Password admin salah.';
+        adminPassword.select();
+        return;
+      }
+      adminPassword.value = '';
+      showAdminPanel();
+    });
+
+    logoutButton.addEventListener('click', async () => {
+      await fetch('/api/admin/logout', { method: 'POST' });
+      adminPanel.hidden = true;
+      adminLogin.hidden = false;
+      adminLoginError.textContent = 'Kamu sudah keluar dari panel admin.';
+    });
+
+    async function loadOrders() {
+      const response = await fetch('/api/orders');
+      const orders = await response.json();
+      adminState.hidden = orders.length > 0;
+      ordersTable.hidden = orders.length === 0;
+      ordersBody.innerHTML = orders.map((order) => `<tr><td><strong>${escapeHtml(order.id)}</strong><br><small>${new Date(order.createdAt).toLocaleString('id-ID')}</small></td><td>${escapeHtml(order.customer.name)}<br><small>${escapeHtml(order.customer.address)}</small></td><td class="order-items">${order.items.map((item) => `${escapeHtml(item.name)} x${item.quantity}`).join('<br>')}</td><td><strong>${rupiah(order.total)}</strong></td><td>${escapeHtml(order.payment)}<br><small>${escapeHtml(order.paymentStatus)}</small></td><td><select data-id="${escapeHtml(order.id)}" class="status-select"><option value="new" ${order.orderStatus === 'new' ? 'selected' : ''}>Baru</option><option value="processing" ${order.orderStatus === 'processing' ? 'selected' : ''}>Diproses</option><option value="shipped" ${order.orderStatus === 'shipped' ? 'selected' : ''}>Dikirim</option><option value="done" ${order.orderStatus === 'done' ? 'selected' : ''}>Selesai</option></select><select data-id="${escapeHtml(order.id)}" class="payment-select"><option value="pending" ${order.paymentStatus === 'pending' ? 'selected' : ''}>Belum dibayar</option><option value="verified" ${order.paymentStatus === 'verified' ? 'selected' : ''}>Terverifikasi</option><option value="cod" ${order.paymentStatus === 'cod' ? 'selected' : ''}>COD</option></select></td></tr>`).join('');
+      document.querySelectorAll('.status-select').forEach((select) => select.addEventListener('change', () => updateStatus(select.dataset.id, { orderStatus: select.value })));
+      document.querySelectorAll('.payment-select').forEach((select) => select.addEventListener('change', () => updateStatus(select.dataset.id, { paymentStatus: select.value })));
+    }
+
+    async function updateStatus(id, update) {
+      await fetch(`/api/orders/${id}/status`, { method: 'PATCH', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(update) });
+      loadOrders();
+    }
+
+    checkAdminSession().catch(() => { adminLoginError.textContent = 'Server belum berjalan. Jalankan npm start terlebih dahulu.'; });
+  </script>
+</body>
+</html>

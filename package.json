@@ -1,0 +1,9 @@
+{
+  "name": "toko-modern-bima",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Backend lokal Toko Modern Bima",
+  "scripts": {
+    "start": "node server.js"
+  }
+}

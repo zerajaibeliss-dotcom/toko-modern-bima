@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Produk | Toko Modern Bima</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="hero-inner">
+      <span class="badge">PRODUK TERBARU</span>
+      <h1>Produk Toko Modern Bima</h1>
+      <p>Temukan pilihan terbaik dari stok yang kami sediakan untuk kebutuhan sehari-hari dan gaya hidup.</p>
+    </div>
+  </header>
+
+  <nav>
+    <a href="index.html">Beranda</a>
+    <a href="produk.html">Produk</a>
+    <a href="tentang.html">Tentang Kami</a>
+    <a href="kontak.html">Kontak</a>
+    <a href="admin.html">Admin</a>
+  </nav>
+
+  <div class="container">
+    <div class="page-header">
+      <h1>Katalog Produk</h1>
+      <p class="section-subtitle">Pilih kategori yang sesuai dengan kebutuhanmu.</p>
+    </div>
+
+    <div class="toolbar">
+      <div class="search-box">
+        <input type="text" id="searchInput" placeholder="Cari produk..." aria-label="Cari produk" />
+      </div>
+      <div class="category-list" aria-label="Filter kategori">
+        <button class="category-btn active" data-filter="all">Semua</button>
+        <button class="category-btn" data-filter="fashion">Fashion</button>
+        <button class="category-btn" data-filter="koleksi">Koleksi</button>
+        <button class="category-btn" data-filter="pria">Pria</button>
+      </div>
+    </div>
+
+    <div class="cart-toolbar">
+      <div>
+        <strong>Keranjang belanja</strong>
+        <span id="cartSummary">0 produk</span>
+      </div>
+      <button class="cart-button" id="openCartButton" type="button">🛒 Lihat Keranjang</button>
+    </div>
+
+    <div class="produk">
+      <div class="card" data-category="koleksi" data-name="Pengang Piala DUNIA Portugal">
+        <img src="assets/1.jpeg" alt="Pengang Piala DUNIA Portugal" />
+        <div class="card-body">
+          <h3>Pegang Piala DUNIA Portugal</h3>
+          <p class="desc">Berat piala 6 kg</p>
+          <p class="price">Rp 150.000.000</p>
+          <a class="btn" href="https://wa.me/62895429519290?text=Halo%20Toko%20Modern%20Bima%2C%20saya%20mau%20pesan%20Piala%20Dunia%20Portugal" target="_blank" rel="noopener noreferrer">Pesan via WhatsApp</a>
+        </div>
+      </div>
+
+      <div class="card" data-category="fashion" data-name="Blouse Wanita Modern">
+        <img src="assets/abc.jpeg" alt="Blouse Wanita Modern" />
+        <div class="card-body">
+          <h3>Blouse Wanita Modern</h3>
+          <p class="desc">Ukuran S, L, XL</p>
+          <p class="price">Rp 150.000</p>
+          <a class="btn" href="https://wa.me/62895429519290?text=Halo%20Toko%20Modern%20Bima%2C%20saya%20mau%20pesan%20Blouse%20Wanita%20Modern" target="_blank" rel="noopener noreferrer">Pesan via WhatsApp</a>
+        </div>
+      </div>
+
+      <div class="card" data-category="pria" data-name="Baju Starboy Swasta ERIA Medan">
+        <img src="assets/b.jpeg" alt="Baju Starboy Swasta ERIA Medan" />
+        <div class="card-body">
+          <h3>Baju Starboy Swasta ERIA Medan</h3>
+          <p class="desc">Ukuran S, L, XL</p>
+          <p class="price">Rp 150.000</p>
+          <a class="btn" href="https://wa.me/62895429519290?text=Halo%20Toko%20Modern%20Bima%2C%20saya%20mau%20pesan%20Baju%20Starboy%20Swasta%20ERIA%20Medan" target="_blank" rel="noopener noreferrer">Pesan via WhatsApp</a>
+        </div>
+      </div>
+
+      <div class="card" data-category="pria" data-name="Baju Kaos Polos PRIA & WANITA">
+        <img src="assets/c.jpeg" alt="Baju Kaos Polos PRIA & WANITA" />
+        <div class="card-body">
+          <h3>Baju Kaos Polos PRIA & WANITA</h3>
+          <p class="desc">Ukuran jumbo</p>
+          <p class="price">Rp 1.000</p>
+          <a class="btn" href="https://wa.me/62895429519290?text=Halo%20Toko%20Modern%20Bima%2C%20saya%20mau%20pesan%20Kaos%20Polos%20Pria%20%26%20Wanita" target="_blank" rel="noopener noreferrer">Pesan via WhatsApp</a>
+        </div>
+      </div>
+
+      <div class="card" data-category="fashion" data-name="Blouse Wanita Modern">
+        <img src="assets/d.jpeg" alt="Blouse Wanita Modern" />
+        <div class="card-body">
+          <h3>Blouse Wanita Modern</h3>
+          <p class="desc">Tampilan modern, nyaman dipakai</p>
+          <p class="price">Rp 150.000</p>
+          <a class="btn" href="https://wa.me/62895429519290?text=Halo%20Toko%20Modern%20Bima%2C%20saya%20mau%20pesan%20Fashion%20Wanita%20Premium" target="_blank" rel="noopener noreferrer">Pesan via WhatsApp</a>
+        </div>
+      </div>
+
+      <div class="card" data-category="fashion" data-name="Blouse Wanita Modern">
+        <img src="assets/e.jpeg" alt="Blouse Wanita Modern" />
+        <div class="card-body">
+          <h3>Blouse Wanita Modern</h3>
+          <p class="desc">Pilihan fashion wanita terbaru</p>
+          <p class="price">Rp 150.000</p>
+          <a class="btn" href="https://wa.me/62895429519290?text=Halo%20Toko%20Modern%20Bima%2C%20saya%20mau%20pesan%20Blouse%20Wanita%20Trendy" target="_blank" rel="noopener noreferrer">Pesan via WhatsApp</a>
+        </div>
+      </div>
+
+      <div class="card" data-category="fashion" data-name="Aku Teknik">
+        <img src="assets/f.jpeg" alt="Aku Teknik" />
+        <div class="card-body">
+          <h3>Aku Teknik</h3>
+          <p class="desc">Pilihan terbaru untuk gaya sehari-hari</p>
+          <p class="price">Rp 180.000</p>
+          <a class="btn" href="https://wa.me/62895429519290?text=Halo%20Toko%20Modern%20Bima%2C%20saya%20mau%20pesan%20Produk%20Fashion%20Lainnya" target="_blank" rel="noopener noreferrer">Pesan via WhatsApp</a>
+        </div>
+      </div>
+
+      <div class="card" data-category="koleksi" data-name="Rogersumatra">
+        <img src="assets/g.jpeg" alt="Rogersumatra" />
+        <div class="card-body">
+          <h3>Rogersumatra</h3>
+          <p class="desc">Koleksi pilihan untuk tampilan lebih istimewa</p>
+          <p class="price">Rp 220.000</p>
+          <a class="btn" href="https://wa.me/62895429519290?text=Halo%20Toko%20Modern%20Bima%2C%20saya%20mau%20pesan%20Produk%20Koleksi%20Spesial" target="_blank" rel="noopener noreferrer">Pesan via WhatsApp</a>
+        </div>
+      </div>
+
+      <div class="card" data-category="fashion" data-name="Ilham Ilmu Hytam">
+        <img src="assets/h.jpeg" alt="Ilham Ilmu Hytam" />
+        <div class="card-body">
+          <h3>Ilham Ilmu Hytam</h3>
+          <p class="desc">Ukuran sedang, bahan awet</p>
+          <p class="price">Rp 175.000</p>
+          <a class="btn" href="https://wa.me/62895429519290?text=Halo%20Toko%20Modern%20Bima%2C%20saya%20mau%20pesan%20Tas%20Wanita%20Minimalis" target="_blank" rel="noopener noreferrer">Pesan via WhatsApp</a>
+        </div>
+      </div>
+
+      <div class="card" data-category="pria" data-name="Aku Apabila">
+        <img src="assets/i.jpeg" alt="Aku Apabila" />
+        <div class="card-body">
+          <h3>Aku Apabila</h3>
+          <p class="desc">Nyaman dipakai harian</p>
+          <p class="price">Rp 240.000</p>
+          <a class="btn" href="https://wa.me/62895429519290?text=Halo%20Toko%20Modern%20Bima%2C%20saya%20mau%20pesan%20Hoodie%20Pria%20Premium" target="_blank" rel="noopener noreferrer">Pesan via WhatsApp</a>
+        </div>
+      </div>
+
+      <div class="card" data-category="pria" data-name="Padahal Aku Mw">
+        <img src="assets/j.jpeg" alt="Padahal Aku Mw" />
+        <div class="card-body">
+          <h3>Padahal Aku Mw</h3>
+          <p class="desc">Bahan tebal dan nyaman</p>
+          <p class="price">Rp 210.000</p>
+          <a class="btn" href="https://wa.me/62895429519290?text=Halo%20Toko%20Modern%20Bima%2C%20saya%20mau%20pesan%20Celana%20Chino%20Casual" target="_blank" rel="noopener noreferrer">Pesan via WhatsApp</a>
+        </div>
+      </div>
+
+      <div class="card" data-category="fashion" data-name="Mic Nabi Adam">
+        <img src="assets/k.jpeg" alt="Mic Nabi Adam" />
+        <div class="card-body">
+          <h3>Mic Nabi Adam</h3>
+          <p class="desc">Sesuai untuk acara ringan</p>
+          <p class="price">Rp 260.000</p>
+          <a class="btn" href="https://wa.me/62895429519290?text=Halo%20Toko%20Modern%20Bima%2C%20saya%20mau%20pesan%20Dress%20Casual%20Wanita" target="_blank" rel="noopener noreferrer">Pesan via WhatsApp</a>
+        </div>
+      </div>
+
+      <div class="card" data-category="pria" data-name="Baju Koko Dua Arah">
+        <img src="assets/l.jpeg" alt="Baju Koko Dua Arah" />
+        <div class="card-body">
+          <h3>Baju Koko Dua Arah</h3>
+          <p class="desc">Santai dan trendi</p>
+          <p class="price">Rp 300.000</p>
+          <a class="btn" href="https://wa.me/62895429519290?text=Halo%20Toko%20Modern%20Bima%2C%20saya%20mau%20pesan%20Jaket%20Bomber%20Unisex" target="_blank" rel="noopener noreferrer">Pesan via WhatsApp</a>
+        </div>
+      </div>
+
+      <div class="card" data-category="pria" data-name="Oyen Cukurukuk">
+        <img src="assets/m.jpeg" alt="Oyen Cukurukuk" />
+        <div class="card-body">
+          <h3>Oyen Cukurukuk</h3>
+          <p class="desc">Nyaman dan adem</p>
+          <p class="price">Rp 225.000</p>
+          <a class="btn" href="https://wa.me/62895429519290?text=Halo%20Toko%20Modern%20Bima%2C%20saya%20mau%20pesan%20Kemeja%20Linen%20Pria" target="_blank" rel="noopener noreferrer">Pesan via WhatsApp</a>
+        </div>
+      </div>
+
+      <div class="card" data-category="fashion" data-name="Daun Pisang untuk Lemper">
+        <img src="assets/n.jpeg" alt="Daun Pisang untuk Lemper" />
+        <div class="card-body">
+          <h3>Daun Pisang untuk Lemper</h3>
+          <p class="desc">Desain simpel dan nyaman</p>
+          <p class="price">Rp 280.000</p>
+          <a class="btn" href="https://wa.me/62895429519290?text=Halo%20Toko%20Modern%20Bima%2C%20saya%20mau%20pesan%20Sepatu%20Sneaker%20Daily" target="_blank" rel="noopener noreferrer">Pesan via WhatsApp</a>
+        </div>
+      </div>
+
+      <div class="card" data-category="koleksi" data-name="Elang Sumatra Modern">
+        <img src="assets/o.jpeg" alt="Elang Sumatra Modern" />
+        <div class="card-body">
+          <h3>Elang Sumatra Modern</h3>
+          <p class="desc">Aksesori harian modern</p>
+          <p class="price">Rp 90.000</p>
+          <a class="btn" href="https://wa.me/62895429519290?text=Halo%20Toko%20Modern%20Bima%2C%20saya%20mau%20pesan%20Topi%20Santai%20Unisex" target="_blank" rel="noopener noreferrer">Pesan via WhatsApp</a>
+        </div>
+      </div>
+
+      <div class="card" data-category="fashion" data-name="Brokoli Rebus Modern">
+        <img src="assets/p.jpeg" alt="Brokoli Rebus Modern" />
+        <div class="card-body">
+          <h3>Brokoli Rebus Modern</h3>
+          <p class="desc">Nyaman untuk aktivitas harian</p>
+          <p class="price">Rp 320.000</p>
+          <a class="btn" href="https://wa.me/62895429519290?text=Halo%20Toko%20Modern%20Bima%2C%20saya%20mau%20pesan%20Setelan%20Muslim%20Wanita" target="_blank" rel="noopener noreferrer">Pesan via WhatsApp</a>
+        </div>
+      </div>
+
+      <div class="card" data-category="pria" data-name="Kucing Mujair Ngambek">
+        <img src="assets/q.jpeg" alt="Kucing Mujair Ngambek" />
+        <div class="card-body">
+          <h3>Kucing Mujair Ngambek</h3>
+          <p class="desc">Bahan halus, potongan longgar</p>
+          <p class="price">Rp 160.000</p>
+          <a class="btn" href="https://wa.me/62895429519290?text=Halo%20Toko%20Modern%20Bima%2C%20saya%20mau%20pesan%20Kaos%20Oversize%20Trend" target="_blank" rel="noopener noreferrer">Pesan via WhatsApp</a>
+        </div>
+      </div>
+
+      <div class="card" data-category="pria" data-name="Sapu untuk Rumah">
+        <img src="assets/r.jpeg" alt="Sapu untuk Rumah" />
+        <div class="card-body">
+          <h3>Sapu untuk Rumah</h3>
+          <p class="desc">Cocok untuk tampilan santai</p>
+          <p class="price">Rp 245.000</p>
+          <a class="btn" href="https://wa.me/62895429519290?text=Halo%20Toko%20Modern%20Bima%2C%20saya%20mau%20pesan%20Kemeja%20Flanel%20Pria" target="_blank" rel="noopener noreferrer">Pesan via WhatsApp</a>
+        </div>
+      </div>
+
+      <div class="card" data-category="fashion" data-name="Boneka Squidward Modern">
+        <img src="assets/s.jpeg" alt="Boneka Squidward Modern" />
+        <div class="card-body">
+          <h3>Boneka Squidward Modern</h3>
+          <p class="desc">Material lembut dan adem</p>
+          <p class="price">Rp 120.000</p>
+          <a class="btn" href="https://wa.me/62895429519290?text=Halo%20Toko%20Modern%20Bima%2C%20saya%20mau%20pesan%20Baju%20Tidur%20Nyaman" target="_blank" rel="noopener noreferrer">Pesan via WhatsApp</a>
+        </div>
+      </div>
+
+      <div class="card" data-category="fashion" data-name="Baju Kaos Merah">
+        <img src="assets/t.jpeg" alt="Baju Kaos Merah" />
+        <div class="card-body">
+          <h3>Baju Kaos Merah</h3>
+          <p class="desc">Warna lembut dan elegan</p>
+          <p class="price">Rp 130.000</p>
+          <a class="btn" href="https://wa.me/62895429519290?text=Halo%20Toko%20Modern%20Bima%2C%20saya%20mau%20pesan%20Syal%20Wanita%20Premium" target="_blank" rel="noopener noreferrer">Pesan via WhatsApp</a>
+        </div>
+      </div>
+
+      <div class="card" data-category="koleksi" data-name="Ayam Jago KFC Modern">
+        <img src="assets/u.jpeg" alt="Ayam Jago KFC Modern" />
+        <div class="card-body">
+          <h3>Ayam Jago KFC Modern</h3>
+          <p class="desc">Bisa dipakai harian atau kerja</p>
+          <p class="price">Rp 195.000</p>
+          <a class="btn" href="https://wa.me/62895429519290?text=Halo%20Toko%20Modern%20Bima%2C%20saya%20mau%20pesan%20Tote%20Bag%20Kulit" target="_blank" rel="noopener noreferrer">Pesan via WhatsApp</a>
+        </div>
+      </div>
+
+      <div class="card" data-category="fashion" data-name="Velg Mobil Orang Elite">
+        <img src="assets/v.jpeg" alt="Velg Mobil Orang Elite" />
+        <div class="card-body">
+          <h3>Velg Mobil Orang Elite</h3>
+          <p class="desc">Nyaman untuk sehari-hari</p>
+          <p class="price">Rp 110.000</p>
+          <a class="btn" href="https://wa.me/62895429519290?text=Halo%20Toko%20Modern%20Bima%2C%20saya%20mau%20pesan%20Sandal%20Slop%20Casual" target="_blank" rel="noopener noreferrer">Pesan via WhatsApp</a>
+        </div>
+      </div>
+
+      <div class="card" data-category="fashion" data-name="Songkok Orang Padang">
+        <img src="assets/x.jpeg" alt="Songkok Orang Padang" />
+        <div class="card-body">
+          <h3>Songkok Orang Padang</h3>
+          <p class="desc">Elegan untuk aktivitas santai</p>
+          <p class="price">Rp 290.000</p>
+          <a class="btn" href="https://wa.me/62895429519290?text=Halo%20Toko%20Modern%20Bima%2C%20saya%20mau%20pesan%20Gamis%20Simple" target="_blank" rel="noopener noreferrer">Pesan via WhatsApp</a>
+        </div>
+      </div>
+
+      <div class="card" data-category="fashion" data-name="Helm Bogo Modern">
+        <img src="assets/y.jpeg" alt="Helm Bogo Modern" />
+        <div class="card-body">
+          <h3>Helm Bogo Modern</h3>
+          <p class="desc">Ukuran cocok untuk anak</p>
+          <p class="price">Rp 85.000</p>
+          <a class="btn" href="https://wa.me/62895429519290?text=Halo%20Toko%20Modern%20Bima%2C%20saya%20mau%20pesan%20Helm%20Bogo%20Modern" target="_blank" rel="noopener noreferrer">Pesan via WhatsApp</a>
+        </div>
+      </div>
+
+      <div class="card" data-category="fashion" data-name="Bunga Mawar Harum">
+        <img src="assets/z.jpeg" alt="Bunga Mawar Harum" />
+        <div class="card-body">
+          <h3>Bunga Mawar Harum</h3>
+          <p class="desc">Tampilan ceria dan nyaman</p>
+          <p class="price">Rp 88.000</p>
+          <a class="btn" href="https://wa.me/62895429519290?text=Halo%20Toko%20Modern%20Bima%2C%20saya%20mau%20pesan%20Bunga%20Mawar%20Harum" target="_blank" rel="noopener noreferrer">Pesan via WhatsApp</a>
+        </div>
+      </div>
+
+      <div class="card" data-category="koleksi" data-name="Anjing Jepang Shiba Inu">
+        <img src="assets/ab.jpeg" alt="Anjing Jepang Shiba Inu" />
+        <div class="card-body">
+          <h3>Anjing Jepang Shiba Inu</h3>
+          <p class="desc">Banyak pilihan warna</p>
+          <p class="price">Rp 70.000</p>
+          <a class="btn" href="https://wa.me/62895429519290?text=Halo%20Toko%20Modern%20Bima%2C%20saya%20mau%20pesan%20Anjing%20Jepang%20Shiba%20Inu" target="_blank" rel="noopener noreferrer">Pesan via WhatsApp</a>
+        </div>
+      </div>
+
+      <div class="card" data-category="koleksi" data-name="Slime untuk Anak">
+        <img src="assets/bc.jpeg" alt="Slime untuk Anak" />
+        <div class="card-body">
+          <h3>Slime untuk Anak</h3>
+          <p class="desc">Cocok untuk dekorasi kamar</p>
+          <p class="price">Rp 150.000</p>
+          <a class="btn" href="https://wa.me/62895429519290?text=Halo%20Toko%20Modern%20Bima%2C%20saya%20mau%20pesan%20Slime%20untuk%20Anak" target="_blank" rel="noopener noreferrer">Pesan via WhatsApp</a>
+        </div>
+      </div>
+
+      <div class="card" data-category="pria" data-name="Baju Kemeja Orang Keren">
+        <img src="assets/cd.jpeg" alt="Baju Kemeja Orang Keren" />
+        <div class="card-body">
+          <h3>Baju Kemeja Orang Keren</h3>
+          <p class="desc">Bahan cepat kering</p>
+          <p class="price">Rp 145.000</p>
+          <a class="btn" href="https://wa.me/62895429519290?text=Halo%20Toko%20Modern%20Bima%2C%20saya%20mau%20pesan%20Baju%20Kemeja%20Orang%20Keren" target="_blank" rel="noopener noreferrer">Pesan via WhatsApp</a>
+        </div>
+      </div>
+
+      <div class="card" data-category="fashion" data-name="Ikan Kembung Modern">
+        <img src="assets/bbc.jpeg" alt="Ikan Kembung Modern" />
+        <div class="card-body">
+          <h3>Ikan Kembung Modern</h3>
+          <p class="desc">Desain modern untuk gaya</p>
+          <p class="price">Rp 135.000</p>
+          <a class="btn" href="https://wa.me/62895429519290?text=Halo%20Toko%20Modern%20Bima%2C%20saya%20mau%20pesan%20Ikan%20Kembung%20Modern" target="_blank" rel="noopener noreferrer">Pesan via WhatsApp</a>
+        </div>
+      </div>
+
+      <div class="card" data-category="koleksi" data-name="Kucing Mujair Imuf">
+        <img src="assets/ccd.jpeg" alt="Kucing Mujair Imuf" />
+        <div class="card-body">
+          <h3>Kucing Mujair Imuf</h3>
+          <p class="desc">Produk unik</p>
+          <p class="price">Rp 150.000</p>
+          <a class="btn" href="https://wa.me/62895429519290?text=Halo%20Toko%20Modern%20Bima%2C%20saya%20mau%20pesan%20Kucing%20Mujair%20Imuf" target="_blank" rel="noopener noreferrer">Pesan via WhatsApp</a>
+        </div>
+      </div>
+
+      <div class="card" data-category="koleksi" data-name="Seragam Sekolah">
+        <img src="assets/bima.jpeg" alt="Seragam Sekolah" />
+        <div class="card-body">
+          <h3>Seragam Sekolah</h3>
+          <p class="desc">Produk sekolah</p>
+          <p class="price">Rp 150.000</p>
+          <a class="btn" href="https://wa.me/62895429519290?text=Halo%20Toko%20Modern%20Bima%2C%20saya%20mau%20pesan%20Seragam%20Sekolah" target="_blank" rel="noopener noreferrer">Pesan via WhatsApp</a>
+        </div>
+      </div>
+
+      <div class="card" data-category="fashion" data-name="Wig Manekin Modern">
+        <img src="assets/yy.jpeg" alt="Wig Manekin Modern" />
+        <div class="card-body">
+          <h3>Wig Manekin Modern</h3>
+          <p class="desc">Produk pilihan</p>
+          <p class="price">Rp 150.000</p>
+          <a class="btn" href="https://wa.me/62895429519290?text=Halo%20Toko%20Modern%20Bima%2C%20saya%20mau%20pesan%20Wig%20Manekin%20Modern" target="_blank" rel="noopener noreferrer">Pesan via WhatsApp</a>
+        </div>
+      </div>
+
+      <div class="card" data-category="koleksi" data-name="1 Set PC Gaming">
+        <img src="assets/zz.jpeg" alt="1 Set PC Gaming" />
+        <div class="card-body">
+          <h3>1 Set PC Gaming</h3>
+          <p class="desc">Paket lengkap</p>
+          <p class="price">Rp 95.000</p>
+          <a class="btn" href="https://wa.me/62895429519290?text=Halo%20Toko%20Modern%20Bima%2C%20saya%20mau%20pesan%201%20Set%20PC%20Gaming" target="_blank" rel="noopener noreferrer">Pesan via WhatsApp</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="cta-banner">
+      <div>
+        <h3>Ingin lihat stok lebih lengkap?</h3>
+        <p>Hubungi kami untuk info produk terbaru dan promo khusus.</p>
+      </div>
+      <a class="btn" href="kontak.html">Pesan Sekarang</a>
+    </div>
+  </div>
+
+  <a class="floating-whatsapp" href="https://wa.me/62895429519290" target="_blank" rel="noopener noreferrer" aria-label="Chat WhatsApp">💬</a>
+
+  <div class="cart-overlay" id="cartOverlay" hidden></div>
+  <aside class="cart-drawer" id="cartDrawer" aria-label="Keranjang belanja" aria-hidden="true">
+    <div class="cart-header">
+      <div>
+        <span class="eyebrow">PESANANMU</span>
+        <h2>Keranjang</h2>
+      </div>
+      <button class="icon-button" id="closeCartButton" type="button" aria-label="Tutup keranjang">&times;</button>
+    </div>
+    <div class="cart-items" id="cartItems"></div>
+    <div class="cart-empty" id="cartEmpty">Keranjang masih kosong. Pilih produk untuk mulai belanja.</div>
+    <div class="cart-footer">
+      <div class="cart-total"><span>Total</span><strong id="cartTotal">Rp 0</strong></div>
+      <button class="btn checkout-button" id="checkoutButton" type="button" disabled>Lanjut Checkout</button>
+    </div>
+  </aside>
+
+  <div class="checkout-overlay" id="checkoutOverlay" hidden>
+    <section class="checkout-modal" role="dialog" aria-modal="true" aria-labelledby="checkoutTitle">
+      <div class="cart-header">
+        <div>
+          <span class="eyebrow">LANGKAH TERAKHIR</span>
+          <h2 id="checkoutTitle">Detail pesanan</h2>
+        </div>
+        <button class="icon-button" id="closeCheckoutButton" type="button" aria-label="Tutup checkout">&times;</button>
+      </div>
+      <p class="checkout-note">Isi data di bawah untuk membuat pesanan. Pembayaran dan status order dikelola dari sistem toko.</p>
+      <form id="checkoutForm">
+        <label for="customerName">Nama lengkap</label>
+        <input id="customerName" name="name" required placeholder="Nama kamu" />
+        <label for="customerAddress">Alamat pengiriman</label>
+        <textarea id="customerAddress" name="address" required placeholder="Alamat lengkap pengiriman"></textarea>
+        <label for="paymentMethod">Metode pembayaran</label>
+        <select id="paymentMethod" name="payment" required>
+          <option value="QRIS">QRIS (scan QR)</option>
+          <option value="ShopeePay">ShopeePay</option>
+          <option value="GoPay">GoPay</option>
+          <option value="Transfer BCA">Transfer BCA</option>
+          <option value="DANA">DANA</option>
+          <option value="COD">COD (bayar di tempat)</option>
+        </select>
+        <div class="payment-details" id="paymentDetails">
+          <div class="payment-qr-unavailable">
+            <strong>QRIS belum tersedia</strong>
+            <span>Gunakan nomor pembayaran di bawah ini.</span>
+          </div>
+          <div class="payment-account">
+            <strong id="paymentAccountLabel">Nomor pembayaran</strong>
+            <span id="paymentAccountNumber">082162905827</span>
+            <button class="copy-payment-button" id="copyPaymentNumber" type="button">Salin nomor</button>
+          </div>
+          <p id="paymentDetailsNote">Scan QR atau gunakan nomor pembayaran di aplikasi pilihanmu.</p>
+        </div>
+        <button class="btn checkout-button" type="submit">Buat Pesanan &amp; Bayar</button>
+      </form>
+    </section>
+  </div>
+
+  <div class="receipt-overlay" id="receiptOverlay" hidden>
+    <section class="receipt-modal" role="dialog" aria-modal="true" aria-labelledby="receiptTitle">
+      <div class="receipt-actions no-print">
+        <button class="icon-button" id="closeReceiptButton" type="button" aria-label="Tutup struk">&times;</button>
+      </div>
+      <div id="receiptContent"></div>
+      <div class="receipt-buttons no-print">
+        <button class="btn" id="confirmPaymentButton" type="button">Saya Sudah Membayar</button>
+        <button class="btn" id="printReceiptButton" type="button">Cetak / Simpan PDF</button>
+        <button class="btn-outline dark-outline" id="doneReceiptButton" type="button">Selesai</button>
+      </div>
+    </section>
+  </div>
+
+  <script>
+    const searchInput = document.getElementById('searchInput');
+    const filterButtons = document.querySelectorAll('.category-btn');
+    const productCards = document.querySelectorAll('.card');
+    const cartItemsElement = document.getElementById('cartItems');
+    const cartEmptyElement = document.getElementById('cartEmpty');
+    const cartTotalElement = document.getElementById('cartTotal');
+    const cartSummaryElement = document.getElementById('cartSummary');
+    const cartDrawer = document.getElementById('cartDrawer');
+    const cartOverlay = document.getElementById('cartOverlay');
+    const checkoutOverlay = document.getElementById('checkoutOverlay');
+    const receiptOverlay = document.getElementById('receiptOverlay');
+    const receiptContent = document.getElementById('receiptContent');
+    const confirmPaymentButton = document.getElementById('confirmPaymentButton');
+    const checkoutButton = document.getElementById('checkoutButton');
+    const paymentMethod = document.getElementById('paymentMethod');
+    const paymentDetails = document.getElementById('paymentDetails');
+    const paymentAccountLabel = document.getElementById('paymentAccountLabel');
+    const paymentAccountNumber = document.getElementById('paymentAccountNumber');
+    const paymentDetailsNote = document.getElementById('paymentDetailsNote');
+    const copyPaymentNumber = document.getElementById('copyPaymentNumber');
+    const paymentNumber = '082162905827';
+    const cart = JSON.parse(localStorage.getItem('bimaCart') || '[]');
+    let currentOrderId = '';
+
+    let activeFilter = 'all';
+
+    const formatPrice = (value) => `Rp ${value.toLocaleString('id-ID')}`;
+
+    productCards.forEach((card) => {
+      const productName = card.querySelector('h3').textContent.trim();
+      const productPrice = Number(card.querySelector('.price').textContent.replace(/[^0-9]/g, ''));
+      const productImage = card.querySelector('img').getAttribute('src');
+      const addButton = document.createElement('button');
+      addButton.className = 'add-cart-button';
+      addButton.type = 'button';
+      addButton.textContent = 'Tambah ke Keranjang';
+      addButton.addEventListener('click', () => addToCart({ name: productName, price: productPrice, image: productImage }));
+      card.querySelector('.card-body').appendChild(addButton);
+    });
+
+    function saveCart() {
+      localStorage.setItem('bimaCart', JSON.stringify(cart));
+    }
+
+    function addToCart(product) {
+      const existing = cart.find((item) => item.name === product.name);
+      if (existing) existing.quantity += 1;
+      else cart.push({ ...product, quantity: 1 });
+      saveCart();
+      renderCart();
+      openCart();
+    }
+
+    function updateQuantity(productName, change) {
+      const item = cart.find((entry) => entry.name === productName);
+      if (!item) return;
+      item.quantity += change;
+      if (item.quantity <= 0) cart.splice(cart.indexOf(item), 1);
+      saveCart();
+      renderCart();
+    }
+
+    function renderCart() {
+      cartItemsElement.innerHTML = '';
+      let total = 0;
+      let quantity = 0;
+      cart.forEach((item) => {
+        total += item.price * item.quantity;
+        quantity += item.quantity;
+        const row = document.createElement('div');
+        row.className = 'cart-item';
+        row.innerHTML = `<img src="${item.image}" alt="${item.name}"><div class="cart-item-info"><strong>${item.name}</strong><span>${formatPrice(item.price)}</span><div class="quantity-controls"><button type="button" data-change="-1">−</button><span>${item.quantity}</span><button type="button" data-change="1">+</button></div></div>`;
+        row.querySelectorAll('button').forEach((button) => button.addEventListener('click', () => updateQuantity(item.name, Number(button.dataset.change))));
+        cartItemsElement.appendChild(row);
+      });
+      cartEmptyElement.hidden = cart.length > 0;
+      cartTotalElement.textContent = formatPrice(total);
+      cartSummaryElement.textContent = `${quantity} produk`;
+      checkoutButton.disabled = cart.length === 0;
+    }
+
+    function openCart() {
+      cartDrawer.classList.add('open');
+      cartDrawer.setAttribute('aria-hidden', 'false');
+      cartOverlay.hidden = false;
+    }
+
+    function closeCart() {
+      cartDrawer.classList.remove('open');
+      cartDrawer.setAttribute('aria-hidden', 'true');
+      cartOverlay.hidden = true;
+    }
+
+    document.getElementById('openCartButton').addEventListener('click', openCart);
+    document.getElementById('closeCartButton').addEventListener('click', closeCart);
+    cartOverlay.addEventListener('click', closeCart);
+    checkoutButton.addEventListener('click', () => { closeCart(); checkoutOverlay.hidden = false; });
+    document.getElementById('closeCheckoutButton').addEventListener('click', () => { checkoutOverlay.hidden = true; });
+    checkoutOverlay.addEventListener('click', (event) => { if (event.target === checkoutOverlay) checkoutOverlay.hidden = true; });
+
+    function updatePaymentDetails() {
+      const payment = paymentMethod.value;
+      const isCod = payment === 'COD';
+      paymentDetails.hidden = isCod;
+      if (isCod) return;
+
+      paymentAccountLabel.textContent = `${payment} - nomor pembayaran`;
+      paymentAccountNumber.textContent = paymentNumber;
+      paymentDetailsNote.textContent = payment === 'QRIS'
+        ? 'Scan QR untuk membuka detail pembayaran, lalu masukkan nominal sesuai total pesanan.'
+        : `Buka ${payment}, pilih kirim uang, lalu gunakan nomor ${paymentNumber}.`;
+    }
+
+    paymentMethod.addEventListener('change', updatePaymentDetails);
+    copyPaymentNumber.addEventListener('click', async () => {
+      try {
+        if (navigator.clipboard && window.isSecureContext) {
+          await navigator.clipboard.writeText(paymentNumber);
+        } else {
+          const temporaryInput = document.createElement('input');
+          temporaryInput.value = paymentNumber;
+          document.body.appendChild(temporaryInput);
+          temporaryInput.select();
+          document.execCommand('copy');
+          temporaryInput.remove();
+        }
+      } catch (error) {
+        return;
+      }
+      copyPaymentNumber.textContent = 'Nomor tersalin';
+      window.setTimeout(() => { copyPaymentNumber.textContent = 'Salin nomor'; }, 1600);
+    });
+    updatePaymentDetails();
+
+    document.getElementById('checkoutForm').addEventListener('submit', async (event) => {
+      event.preventDefault();
+      const form = new FormData(event.currentTarget);
+      const lines = cart.map((item) => `- ${item.name} x${item.quantity} = ${formatPrice(item.price * item.quantity)}`);
+      const total = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
+      checkoutButton.disabled = true;
+      let order;
+      try {
+        const response = await fetch('/api/orders', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ customer: { name: form.get('name'), address: form.get('address') }, items: cart, total, payment: form.get('payment') }) });
+        if (!response.ok) throw new Error('Order gagal disimpan');
+        order = await response.json();
+      } catch (error) {
+        order = {
+          id: `BMA-${Date.now().toString().slice(-8)}`,
+          createdAt: new Date().toISOString(),
+          customer: { name: form.get('name'), address: form.get('address') },
+          items: [...cart],
+          total,
+          payment: form.get('payment'),
+          paymentStatus: form.get('payment') === 'COD' ? 'cod' : 'pending',
+          orderStatus: 'new',
+          localOnly: true
+        };
+      }
+      currentOrderId = order.id;
+      const orderId = order.id;
+      const orderDate = new Intl.DateTimeFormat('id-ID', { dateStyle: 'full', timeStyle: 'short' }).format(new Date());
+      const payment = form.get('payment');
+      const paymentInstruction = payment === 'QRIS'
+        ? `Scan QR pembayaran Toko Modern Bima, lalu masukkan total ${formatPrice(total)}.`
+        : payment === 'ShopeePay' || payment === 'GoPay'
+          ? `Kirim ${formatPrice(total)} ke nomor pembayaran ${paymentNumber}.`
+          : payment === 'Transfer BCA'
+            ? 'Transfer ke rekening BCA toko yang akan dikonfirmasi admin.'
+            : payment === 'DANA'
+              ? `Kirim ${formatPrice(total)} ke nomor pembayaran ${paymentNumber}.`
+              : 'Pembayaran dilakukan saat pesanan sampai.';
+      const initialStatus = payment === 'COD' ? 'Menunggu diproses' : 'Menunggu pembayaran';
+      receiptContent.innerHTML = `<div class="receipt-brand"><span class="eyebrow">TOKO MODERN BIMA</span><h2 id="receiptTitle">Struk Pesanan</h2><p>${orderDate}</p></div><div class="receipt-meta"><span><small>Nomor order</small><strong>${orderId}</strong></span><span><small>Status</small><strong class="receipt-status" id="receiptStatus">${initialStatus}</strong></span></div><div class="receipt-customer"><p><strong>${form.get('name')}</strong></p><p>${form.get('address')}</p><p>Metode: ${payment}</p></div><div class="payment-instruction"><strong>Instruksi pembayaran</strong><p>${paymentInstruction}</p></div><div class="receipt-lines">${cart.map((item) => `<div><span>${item.name} × ${item.quantity}</span><strong>${formatPrice(item.price * item.quantity)}</strong></div>`).join('')}</div><div class="receipt-grand-total"><span>Total pesanan</span><strong>${formatPrice(total)}</strong></div><p class="receipt-footnote">Simpan struk ini sebagai bukti order. Status pembayaran dapat diperbarui setelah konfirmasi.</p>`;
+      checkoutOverlay.hidden = true;
+      receiptOverlay.hidden = false;
+      confirmPaymentButton.hidden = payment === 'COD';
+      confirmPaymentButton.disabled = false;
+      confirmPaymentButton.textContent = 'Saya Sudah Membayar';
+      localStorage.setItem('bimaLastOrder', JSON.stringify({ orderId, orderDate, payment, total, status: initialStatus }));
+      cart.splice(0, cart.length);
+      saveCart();
+      renderCart();
+    });
+
+    function closeReceipt() {
+      receiptOverlay.hidden = true;
+    }
+
+    document.getElementById('closeReceiptButton').addEventListener('click', closeReceipt);
+    document.getElementById('doneReceiptButton').addEventListener('click', closeReceipt);
+    document.getElementById('printReceiptButton').addEventListener('click', () => window.print());
+    confirmPaymentButton.addEventListener('click', () => {
+      const status = document.getElementById('receiptStatus');
+      status.textContent = 'Menunggu verifikasi pembayaran';
+      confirmPaymentButton.textContent = 'Pembayaran Terkirim';
+      confirmPaymentButton.disabled = true;
+      const latestOrder = JSON.parse(localStorage.getItem('bimaLastOrder') || '{}');
+      fetch(`/api/orders/${currentOrderId}/status`, { method: 'PATCH', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ paymentStatus: 'submitted' }) });
+      latestOrder.status = 'Menunggu verifikasi pembayaran';
+      localStorage.setItem('bimaLastOrder', JSON.stringify(latestOrder));
+    });
+
+    function updateProducts() {
+      const keyword = searchInput.value.trim().toLowerCase();
+
+      productCards.forEach((card) => {
+        const name = card.dataset.name.toLowerCase();
+        const category = card.dataset.category;
+        const matchesFilter = activeFilter === 'all' || category === activeFilter;
+        const matchesSearch = !keyword || name.includes(keyword);
+
+        card.classList.toggle('hidden', !(matchesFilter && matchesSearch));
+      });
+    }
+
+    searchInput.addEventListener('input', updateProducts);
+
+    filterButtons.forEach((button) => {
+      button.addEventListener('click', () => {
+        filterButtons.forEach((btn) => btn.classList.remove('active'));
+        button.classList.add('active');
+        activeFilter = button.dataset.filter;
+        updateProducts();
+      });
+    });
+
+    renderCart();
+  </script>
+
+  <footer>
+    <p>&copy; 2026 Toko Modern Bima</p>
+    <p>Semua hak dilindungi oleh Bima.</p>
+  </footer>
+</body>
+</html>
